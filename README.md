@@ -1,2 +1,5 @@
 # fund-arteaga-satian-bryan-david
-Sión
+<<<<<<< HEAD
+División
+
+
