@@ -1,5 +1,5 @@
 //Typescript
-const iva=1;
+const iva =1;
 //iva=2;    
 
 // variables Primitivas
