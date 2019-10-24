@@ -24,3 +24,6 @@ resultado = 4 % 3; // 1 -> residuo
 resultado = 7 % 3; // 1 -> residuo
 console.log("pera" + 2);
 //STRINGS
+var mensaje = "Hola Mundo";
+var saludo = "Adiós Mundo";
+console.log(mensaje + saludo);
