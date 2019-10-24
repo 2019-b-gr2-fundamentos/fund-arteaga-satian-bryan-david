@@ -2,18 +2,24 @@
 const iva=1;
 //iva=2;    
 
-//Variables Primitivas
+// variables Primitivas
 const numero = 10
-const decimal = 10.12
-const respuestaTiponumero = typeof numero; 
-console.log(respuestaTiponumero)
+const decimal = 10.12;
+const respuestaTipoNumero = typeof numero
+const letra = "a"
+const palabra = "palabraaa"
+const tipos = null
+const casado = false
+const fecha = new Date();
+const hola = "+"
 console.log(typeof decimal);
-const letra = "a";
-const palabra = "palabra"
-console.log(typeof letra);
-console.log(typeof palabra);
-
-
-//Gestor de paquetes
-//de Node js --> Comunicarse con repositorio 
-
+console.log(respuestaTipoNumero);
+console.log(typeof letra)
+console.log(typeof palabra)
+console.log(typeof tipos)
+console.log(typeof casado)
+console.log(typeof fecha)
+console.log(typeof holaa )
+// Gestor de paquetes de node.js
+// npm y yarn
+// comunicarse con el repositorio y descargar el paquete
