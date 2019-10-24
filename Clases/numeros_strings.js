@@ -24,7 +24,8 @@ resultado = 4 % 3; // 1 -> residuo
 resultado = 7 % 3; // 1 -> residuo
 console.log("pera" + 2);
 //STRINGS
-var mensaje = "Hola Mundo";
+var mensaje = " \"Hola Mundo\""; //Fijarse en las comillas, para hacer que en la compilación aparezcan estas.
 var saludo = "Adiós Mundo";
-console.log(mensaje + saludo);
-
+console.log(mensaje + "\n" + saludo); //Agrego el  " " para asignar espacios entre las strings
+// Usamos el \n para hacer saltos de linea
+console.log(mensaje + "1\t\t\t ");

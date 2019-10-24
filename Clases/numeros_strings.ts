@@ -31,4 +31,4 @@ const mensaje= " \"Hola Mundo\"";  //Fijarse en las comillas, para hacer que en 
 const saludo = "Adiós Mundo";
 console.log(mensaje + "\n" + saludo); //Agrego el  " " para asignar espacios entre las strings
                                         // Usamos el \n para hacer saltos de linea
-
+console.log(mensaje + "1\t\t\t " );
