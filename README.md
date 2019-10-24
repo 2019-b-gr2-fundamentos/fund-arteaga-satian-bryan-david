@@ -3,7 +3,7 @@ Escuela Politécnica Nacional
     
       "A R T E A G A"
          
-            :)
+            
 
 
 
