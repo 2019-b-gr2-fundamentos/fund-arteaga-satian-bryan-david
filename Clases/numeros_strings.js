@@ -27,3 +27,4 @@ console.log("pera" + 2);
 var mensaje = "Hola Mundo";
 var saludo = "Adiós Mundo";
 console.log(mensaje + saludo);
+

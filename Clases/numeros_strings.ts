@@ -23,7 +23,6 @@ resultado = 1 ^ 2;
 resultado = 4 % 2; // 0 -> residuo
 resultado = 4 % 3; // 1 -> residuo
 resultado = 7 % 3; // 1 -> residuo
-
 console.log("pera" + 2);
 
 //STRINGS
@@ -32,5 +31,4 @@ const mensaje= " \"Hola Mundo\"";  //Fijarse en las comillas, para hacer que en 
 const saludo = "Adiós Mundo";
 console.log(mensaje + "\n" + saludo); //Agrego el  " " para asignar espacios entre las strings
                                         // Usamos el \n para hacer saltos de linea
-
 
