@@ -24,6 +24,3 @@ resultado = 4 % 2; // 0 -> residuo
 resultado = 4 % 3; // 1 -> residuo
 resultado = 7 % 3; // 1 -> residuo
 
-console.log("pera" + 2);
-
-//STRINGS
