@@ -66,4 +66,5 @@ console.log(nombreLongitud.indexOf("v")); //Me demuestra la posición del caract
 console.log(nombreLongitud.includes(" ")); // el includes me devuelve un V o F, si se encuentra lo que busco 
 console.log(nombreLongitud.includes("z"));
 console.log(nombreLongitud.startsWith(" Da")); // Medice si empieza con lo que le digo (V o F), se cuenta los espacios
-console.log(nombreLongitud.substring(0,3)); // Hace lo mismo que el slice
+console.log(nombreLongitud.substring(0,3)); // Hace lo mismo que el slice jsjsjs asdad
+
