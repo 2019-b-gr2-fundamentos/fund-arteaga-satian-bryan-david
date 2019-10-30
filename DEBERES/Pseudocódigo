@@ -5,3 +5,11 @@ ingresa un condicional, si el segundo número que se introdujo es 0, mandar un m
 de que no se puede dividir para 0, caso contrario hacer que exista la operación de la división.
 El resultado que se imprima en pantalla.
 */
+
+Escribir un programa que eleve al cuadrado a2+b2=c2
+<a,b>/||b||2(b)
+definir dos variables que sean guarden vectores de R2
+luego aplicar esta fórmula:
+(<a,b>/||b||^2)(bvector)
+luego de eso, sacar el módulo del resultado.
+
