@@ -1,0 +1,7 @@
+ /*Escribir un programa que simule la división entre dos números
+primero definir 2 variables de tipo "número"
+luego, hacer que el usuario ingrese los 2 números.
+ingresa un condicional, si el segundo número que se introdujo es 0, mandar un mensaje 
+de que no se puede dividir para 0, caso contrario hacer que exista la operación de la división.
+El resultado que se imprima en pantalla.
+*/
