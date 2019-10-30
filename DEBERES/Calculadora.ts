@@ -1,6 +1,6 @@
 console.log("\tBienvenido, este programa simula una calculadora\n\nElija su oción preferida:");
 console.log("Suma: 1.\nResta: 2.\nMultiflicación: 3.\nDivisión: 4.\n");
-const ElegirOpcion = prompt("Choose now or die: ");
+const ElegirOpcion = prompt("Choose now: ");
 
 if(ElegirOpcion==1||ElegirOpcion==2||ElegirOpcion==3||ElegirOpcion==4){
 
