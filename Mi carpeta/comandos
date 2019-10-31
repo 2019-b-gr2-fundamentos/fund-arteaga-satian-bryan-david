@@ -1,3 +1,10 @@
 
 tranquilar de ts a javascript javascript :  tsc lib ES5 "Nombre del archivo"
 //.length sirva para contar el número de caracteres.
+
+para compilar en c++:
+g++ nombrearchivo.cpp -o nombrearchivo.exe
+/* con eso creo que hace un build 
+luego,
+solo escribir nombrearchivo
+y ya se compila.
