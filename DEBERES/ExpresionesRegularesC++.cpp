@@ -1,4 +1,0 @@
-/*
-Deber Expresiones Regulares.
-
-*/
