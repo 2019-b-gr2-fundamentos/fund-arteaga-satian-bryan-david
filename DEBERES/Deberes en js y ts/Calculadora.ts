@@ -69,3 +69,4 @@ if(union){
 }else{
         console.log("Has elegido un número que no está en las opciones.");
 }
+//jasksajadjadszajajs
