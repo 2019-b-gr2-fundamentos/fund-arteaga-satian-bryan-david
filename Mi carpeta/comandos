@@ -8,3 +8,6 @@ g++ nombrearchivo.cpp -o nombrearchivo.exe
 luego,
 solo escribir nombrearchivo
 y ya se compila.
+
+Para hacer un console.log con variabeles y texto >
+console.log(`blablabla ${} asffdas);
