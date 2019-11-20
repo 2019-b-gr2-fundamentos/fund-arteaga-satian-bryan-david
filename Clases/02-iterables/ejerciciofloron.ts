@@ -1,3 +1,4 @@
+
 /*JUEGO!!!
 1) Crear arreglo de 5 elementos
 2) Cada elemento 1 o un 0
@@ -21,7 +22,7 @@ for(let contadorUno = 0; contadorUno<indice; contadorUno++){
 
 //se crea el arreglo de numeros random
 do{
-    for(let contador = 0; contador<indice; contador++){
+    for(let contadorDos = 0; contadorDos<indice; contadorDos++){
     miArreglo.push(Math.floor(Math.random()*2));
     }
 
@@ -30,3 +31,7 @@ do{
 
     console.log(miArreglo);
    
+//Saber donde esta el floron
+
+
+
