@@ -1,4 +1,4 @@
-
+   /*
 // FOR
 // 1) DEclarar una variable.
 // 2) Condicion (Expresion)
@@ -34,4 +34,6 @@ for(let contador = 0; contador<tamano; contador++){
 //Acceder al elemento num 5 del arreglo
 console.log(`El # 5 del arreglo es ${arregloNumeros[4]}`);
 
+
+*/
 
