@@ -11,3 +11,4 @@ y ya se compila.
 
 Para hacer un console.log con variabeles y texto >
 console.log(`blablabla ${} asffdas);
+    
