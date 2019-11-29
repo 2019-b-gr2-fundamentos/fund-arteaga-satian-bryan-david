@@ -1,4 +1,4 @@
-/*
+/* **************************
 function imprimirMensajeNveces( mensaje: string, numeroVeces: number): void{
    
     if(numeroVeces == 0){
@@ -17,7 +17,7 @@ function main(){
 }
 main();
 
-*/
+*****************************   */
 
 /*
 TIPADO DE ARREGLOS
@@ -29,7 +29,7 @@ PSEUCODIGO
 ingresa un arreglo a la funcion, luegoesta funcion me  imprime los elementos del arreglo.
 */
 
-
+/*
 
 function contadorArreglo(elementosArreglo: number[], posicionArreglo: number): void{
 
@@ -48,3 +48,36 @@ function main(){
     contadorArreglo(miArreglo, 3);
 }
 main();
+*/
+
+
+
+// 28 DE NOVIEMbre
+
+const arregloDosDimesiones = [
+    
+    [1,2,3,4],
+    [4,5,6,7]
+];
+
+
+const indice = (arregloDosDimesiones[0].length -1);
+
+
+let producto =0;
+let sumatoria = 0;
+
+   
+for(let j = indice; j>=0; j--){
+    for(let i = 0; i<=indice; i++){
+    
+
+        
+        producto =   arregloDosDimesiones[0][i] * arregloDosDimesiones[1][j];
+        sumatoria = sumatoria + producto;
+        console.log(producto);
+
+    }
+    
+}
+
