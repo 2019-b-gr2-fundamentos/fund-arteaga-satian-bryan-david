@@ -54,6 +54,8 @@ main();
 
 // 28 DE NOVIEMbre
 
+
+
 const arregloDosDimesiones = [
     
     [1,2,3,4],
@@ -63,7 +65,7 @@ const arregloDosDimesiones = [
 
 const indice = (arregloDosDimesiones[0].length -1);
 
-
+function arrayUno()
 let producto =0;
 let sumatoria = 0;
 
