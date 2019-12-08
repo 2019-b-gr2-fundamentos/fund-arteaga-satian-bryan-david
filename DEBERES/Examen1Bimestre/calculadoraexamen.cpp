@@ -30,7 +30,7 @@ void seguirEnELPrograma();
 
 // FUNCION PRINCIPAL FUNCION PRINCIPAL FUNCION PRINCIPAL
 int main(){
-    system("color 04");
+    system("color 02");
     calcu(); //LA FUNCION MAIN ES LA PRINCIPAL, DENTRO DE ESTA SE HACE EJECUTAR LA FUNCION CALCU.
     
 
@@ -97,6 +97,7 @@ void NumeroParoImpar(int numUno){
 }
 void SolReal(float a, float b, float c){
     float discriminante = ((b*b)-(4*a*c));
+    cout<<"El discriminante es "<<discriminante<<" por lo tanto: "<<endl;
     if(discriminante>=0){
         cout<<"La ecuacion SI tiene soluciones Reales"<<endl;
     }else{
@@ -113,9 +114,9 @@ float Hipotenusa(float catetoUno, float catetoDos){
 
 void calcu(){
     cout<<"\n\n\n\tBienvenido, este programa simula una calculadora especial\n\nElija su opcion preferida:";
-    cout<<("\nSuma: 1.\nResta: 2.\nMultiplicacion: 3.\nDivision: 4.\nFactorial: 5.\nPotencia de un numero: 6.");
-    cout<<("\nCalcular el M.C.M de un numero: 7.\nSaber si un numero es par o impar: 8.");
-    cout<<("\nDeterminar si una Ec. Cuadratica tiene soluciones reales: 9.\nCalcular la hipotenusa: 10.\nSALIR: 0.\n");
+    cout<<("\nSuma: ---> 1.\nResta: ---> 2.\nMultiplicacion: ---> 3.\nDivision: ---> 4.\nFactorial: ---> 5.\nPotencia de un numero: ---> 6.");
+    cout<<("\nCalcular el M.C.M de un numero: ---> 7.\nSaber si un numero es par o impar: ---> 8.");
+    cout<<("\nDeterminar si una Ec. Cuadratica tiene soluciones reales: ---> 9.\nCalcular la hipotenusa: ---> 10.\nSALIR: ---> 0.\n");
     int elegirOpcion; cin>>elegirOpcion;
     bool opcionSuma = elegirOpcion == 1;
     bool opcionResta = elegirOpcion ==2;
