@@ -18,6 +18,13 @@ float Restar(float numUno, float numDos);
 float Multiplicar(float numUno, float numDos);
 float Dividir(float numUno, float numDos);
 float Factorial(float numUno, float numDos);
+float Potencia(float numUno, float elevado);
+void MinimoComunMultiplo(int numUno);
+void NumeroParoImpar(int numUno);
+void SolReal(float a, float b, float c);
+float Hipotenusa(float catetoUno, float catetoDos);
+
+
 void calcu();
 void seguirEnELPrograma();
 
@@ -60,18 +67,68 @@ int Factorial(float numUno){
 
     return resultadofactorial;
 }
+float Potencia(float numUno, float elevado){
+    return pow(numUno, elevado);
+}
+void MinimoComunMultiplo(int numUno){
+    int i = 2;
+    int num = numUno;
+	 while(i<=num){ 
+		if(num%i==0){ 
+            if(num!=i){
+				cout<<i<<"*";
+            }else{ 
+				cout<<i<<".";
+			}
+		    num/=i;
+			i-1;   
+        }else{
+		i++;
+        }
+    }
+    cout<<endl;
+}
+void NumeroParoImpar(int numUno){
+    if(numUno%2==0){
+        cout<<"El numero que ingresaste es PAR\n";
+    }else{
+        cout<<"El numero que ingresaste es IMPAR\n";
+    }
+}
+void SolReal(float a, float b, float c){
+    float discriminante = ((b*b)-(4*a*c));
+    if(discriminante>=0){
+        cout<<"La ecuacion SI tiene soluciones Reales"<<endl;
+    }else{
+        cout<<"La ecuacion NO tiene soluciones Reales"<<endl;
+    }
+}
+float Hipotenusa(float catetoUno, float catetoDos){
+    
+    float hipo = sqrt((catetoUno*catetoUno)+(catetoDos*catetoDos));
+    return hipo;
+}
+
+
 
 void calcu(){
-    cout<<"\n\n\n\tBienvenido, este programa simula una calculadora\n\nElija su opcion preferida:";
-    cout<<("\nSuma: 1.\nResta: 2.\nMultiplicacion: 3.\nDivision: 4.\nFactorial 5. \nSALIR 6.\n");
-    string elegirOpcion; cin>>elegirOpcion;
-    bool opcionSuma = elegirOpcion == "1" || elegirOpcion == "suma" || elegirOpcion == "Suma";
-    bool opcionResta = elegirOpcion =="2" || elegirOpcion =="resta" ||elegirOpcion =="Resta";
-    bool opcionMultiplicacion = elegirOpcion =="3" || elegirOpcion =="multiplicacion" ||elegirOpcion == "Multiplicacion";
-    bool opcionDivision = elegirOpcion == "4" || elegirOpcion == "division" || elegirOpcion == "Division"; 
-    bool opcionFactorial = elegirOpcion =="5" || elegirOpcion =="factorial" ||elegirOpcion == "Factorial";
-    bool opcionSALIR = elegirOpcion =="6" || elegirOpcion == "salir";
-    bool opcionesValidas = opcionSuma || opcionResta || opcionMultiplicacion ||opcionDivision || opcionFactorial || opcionSALIR;
+    cout<<"\n\n\n\tBienvenido, este programa simula una calculadora especial\n\nElija su opcion preferida:";
+    cout<<("\nSuma: 1.\nResta: 2.\nMultiplicacion: 3.\nDivision: 4.\nFactorial: 5.\nPotencia de un numero: 6.");
+    cout<<("\nCalcular el M.C.M de un numero: 7.\nSaber si un numero es par o impar: 8.");
+    cout<<("\nDeterminar si una Ec. Cuadratica tiene soluciones reales: 9.\nCalcular la hipotenusa: 10.\nSALIR: 0.\n");
+    int elegirOpcion; cin>>elegirOpcion;
+    bool opcionSuma = elegirOpcion == 1;
+    bool opcionResta = elegirOpcion ==2;
+    bool opcionMultiplicacion = elegirOpcion ==3;
+    bool opcionDivision = elegirOpcion == 4;
+    bool opcionFactorial = elegirOpcion ==5;
+    bool opcionPotencia = elegirOpcion == 6;
+    bool opcionMCM = elegirOpcion == 7;
+    bool opcionparimpar = elegirOpcion == 8;
+    bool opcionReales = elegirOpcion == 9;
+    bool opcionHipotenusa = elegirOpcion == 10;
+    bool opcionSALIR = elegirOpcion ==0;
+    bool opcionesValidas = opcionSuma || opcionResta || opcionMultiplicacion ||opcionDivision || opcionFactorial || opcionPotencia || opcionMCM || opcionparimpar || opcionReales || opcionHipotenusa || opcionSALIR;
     bool opBasicas = opcionSuma || opcionResta || opcionMultiplicacion ||opcionDivision;
 
     
@@ -116,16 +173,68 @@ void calcu(){
         }
 
         if(opcionFactorial){
-            cout<<"----------------------------------";
             cout<<"\nHas elegido la operacion factorial"<<endl<<"Ingresa un numero entero: "<<endl;
             int numUno, resultado;
             cin>>numUno; cout<<endl;
             resultado = Factorial(numUno);
-            cout<<"El resultado es: "<<endl<<resultado<<endl;
+            cout<<"----------------------------------";
+            cout<<"\nEl resultado es: "<<endl<<resultado<<endl;
+            cout<<"\n----------------------------------";
+            cout<<endl<<endl;
+            seguirEnELPrograma();    
+        }
+
+        if(opcionPotencia){
+            cout<<"\nHas elegido la potenciacion\n";
+            float numUno;
+            float elevado;
+            float resultado;
+            cout<<"Elige un numero: \n"; cin>>numUno;
+            cout<<"A que numero quieres elevarlo?\n"; cin>>elevado;
+            resultado = Potencia(numUno,elevado);
+            cout<<"----------------------------------";
+            cout<<"\nEl resultado es: "<<endl<<resultado<<endl;
             cout<<"\n----------------------------------";
             cout<<endl<<endl;
             seguirEnELPrograma();
-            
+        }
+
+        if(opcionMCM){
+            cout<<"\nPara calcular el MCM de un numero"<<endl<<"Ingresa un numero entero: "<<endl;
+            int numUno; 
+            cin>>numUno; cout<<endl;
+            MinimoComunMultiplo(numUno);
+            cout<<endl<<endl;
+            seguirEnELPrograma();    
+        }
+
+        if(opcionparimpar){
+            cout<<"\nIngresa un numero entero:"<<endl;
+            int numUno; cin>>numUno;
+            NumeroParoImpar(numUno);
+            cout<<endl<<endl;
+            seguirEnELPrograma();
+        }
+
+        if(opcionReales){
+            cout<<"\nIngresa a, b, c de la forma ax^2+bx+c:\n";
+            float a,b,c;
+            cout<<"\nIngresa a: "; cin>>a; 
+            cout<<"\nIngresa b: "; cin>>b;
+            cout<<"\nIngresa c: "; cin>>c; cout<<endl;
+            SolReal(a,b,c);
+            cout<<endl<<endl;
+            seguirEnELPrograma();
+        }
+
+        if(opcionHipotenusa){
+            float catetoUno, catetoDos, resultado;
+            cout<<"\nIngresa el primer cateto: "; cin>>catetoUno;
+            cout<<"Ingresa el segundo cateto: "; cin>>catetoDos;
+            resultado = Hipotenusa(catetoUno,catetoDos);
+            cout<<"\nEl resultado de la hipotenusa es: "<<resultado<<endl;
+            cout<<endl<<endl;
+            seguirEnELPrograma();
         }
 
         if(opcionSALIR){
