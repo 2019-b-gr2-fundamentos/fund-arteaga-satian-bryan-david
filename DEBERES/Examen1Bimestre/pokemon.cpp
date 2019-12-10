@@ -17,11 +17,11 @@ NO OLVIDARSE DE DAR UNA OPCION SALIR.
 void pokedex();
 bool analisisdeOp(string op);
 string DandoNombres(string op);
-//void EliminacionesYEvoluciones(string pokemonUno, string pokemonDos, string pokemonTres, string pokemonCuatro);
-
+void Eliminaciones(string pokemonUno, string pokemonDos, string pokemonTres, string pokemonCuatro);
+void PreguntarEvolucion(string Uno, string Dos);
+void Evoluciones(string pokemonUno, string pokemonDos);
 
 int main(){
-    system("color 02");
     pokedex();
     
 
@@ -91,10 +91,10 @@ void pokedex(){
               
     }
 
-    cout<<"\nFELICIDADES!!\nAhora tienes tu pokeball llena: \n\n";
+    cout<<"\nFELICIDADES!!\nAhora tienes tu pokeball\n\n";
     
     //DE AHORA EN ADELANTE EMPEZAMOS CON LAS EVOLUCIONES Y LAS ELIMINACIONES
-   // EliminacionesYEvoluciones(pokebola[0], pokebola[1], pokebola[2], pokebola[3]);
+    Eliminaciones(pokebola[0], pokebola[1], pokebola[2], pokebola[3]);
 
 }
 
@@ -148,25 +148,123 @@ string DandoNombres(string op){
     return pokemon;
 
 }
+/*
+*/
+void Eliminaciones(string pokemonUno, string pokemonDos, string pokemonTres, string pokemonCuatro){
+    string pokeballCasi[] = {pokemonUno, pokemonDos, pokemonTres, pokemonCuatro};
+    cout<<"TU POKEBALL : ["<<pokemonUno<<", "<<pokemonDos<<", "<<pokemonTres<<", "<<pokemonCuatro<<"]\n\n";
+    
 
-/*void EliminacionesYEvoluciones(string pokemonUno, string pokemonDos, string pokemonTres, string pokemonCuatro){
-
-    int Decidircambio;
-    cout<<"\nDeseas hacer algun cambio??\nSI --> 1.\nNO -->2.\nSALIR --> 0\n\nOpcion: "; cin>>Decidircambio;
-    if(Decidircambio==2){
-        cout<<"\t\nTU POKEBALL:\n--------------------\n";
-        //mostramos la pokeball
-        cout<<pokemonUno<<endl<<pokemonDos<<endl<<pokemonTres<<endl<<pokemonCuatro<<endl;
-        cout<<"--------------------\n";
+    cout<<"Ahora estamos listos para la batalla!!!\nNuestro primer oponente es BROCK de ciudad Plateada\n";
+    cout<<"Brock ha elegido a ONIX y a GENGAR!!!\n";
+    cout<<"\nPERO TENEMOS UN GRAN PROBLEMA\nDebemos eliminar 2 pokemones para estar a la par en la batalla:  ";
+    cout<<"Que pokemon vas a eliminar?\n";
+    for(int i=0; i<4; i++){
+        cout<<pokeballCasi[i]<<"---> "<<i+1<<". "<<endl;
     }
-    if(Decidircambio==1){
+    string Eliminarpokemon[2];
+
+    cout<<"\nEliminar pokemon: "; cin>>Eliminarpokemon[0];
+    cout<<"\nEliminar pokemon: "; cin>>Eliminarpokemon[1];
+
+    for(int j=0; j<2; j++){
+       if(Eliminarpokemon[j] == "1"){
+           pokeballCasi[0] = "eliminado";
+        }
+       if(Eliminarpokemon[j] == "2"){
+           pokeballCasi[1] = "eliminado";
+        }
+       if(Eliminarpokemon[j] == "3"){
+           pokeballCasi[2] = "eliminado";
+        }
+        if(Eliminarpokemon[j] == "4"){
+           pokeballCasi[3] = "eliminado";
+        }
+          
+    }
+    
+    string PokeballTotal[2];
+
+
+ //CON ESTE BUCLE DEFINIMOS EL NUEVO ARREGLO SOLO CON LOS DOS POKEMONES.
+    int x = 0;
+    for(int i = 0; i<4; i++){
+        if(pokeballCasi[i]!="eliminado"){
+            PokeballTotal[x] = pokeballCasi[i];
+            x+=1;
+        }
 
     }
 
+    cout<<"\n\tTu nueva Pokeball es:\n\n["<<PokeballTotal[0]<<", "<<PokeballTotal[1]<<"]";   
 
+    PreguntarEvolucion( PokeballTotal[0], PokeballTotal[1]);
+    
+}   
+
+        //DEspues agregar la condicion de si quiere evolucionar o no.
+void PreguntarEvolucion(string Uno, string Dos){
+    cout<<"\n\nDeseas evolucionar tus pokemones antes de la batalla?\nSI --> 1.\nNO --> 2.";
+    int Elige;
+    cout<<"\nElige: "; cin>>Elige;
+    switch(Elige){
+        case 1:
+            Evoluciones(Uno, Dos);
+            break;
+        
+        case 2:
+            cout<<"\n\t   TU POKEBALL:\n\t------------------------\n"<<"       "<<Uno<<endl<<"       "<<Dos<<endl<<"\t------------------------";
+            cout<<"\n\n PREPARATE PARA LA BATALLA!!!!\n Buena Suerte. ";
+            break;
+        
+        default:
+            cout<<"Has elegido una opcion NO valida.";
+            PreguntarEvolucion(Uno, Dos);
+            break;
+    }
 
 }
 
-/*
-    */
+
+
+
+void Evoluciones(string pokemonUno, string pokemonDos){
+     
+    string pokeball[2] = {pokemonUno, pokemonDos};
+
+    for(int j = 0; j<2;j++){
+
+        cout<<endl<<pokeball[j]<<" ha evolucionado a ---->  ";
+        
+                if(pokeball[j] == "Bulbasaur"){
+                    pokeball[j] = "Ivysaur";
+                    
+                }
+                if(pokeball[j] == "Charmander"){
+                    pokeball[j] = "Charmeleon";
+                }
+                if(pokeball[j] == "Squirtle"){
+                   pokeball[j] ="Wartortle";
+                }
+                if(pokeball[j] == "Cubone"){
+                    pokeball[j] = "Marowak";
+                }
+                if(pokeball[j] == "Pikachu"){
+                    pokeball[j] = "Raichu";
+                }
+                if(pokeball[j] == "Vulpix"){
+                    pokeball[j] = "Ninetales";
+                }
+                if(pokeball[j] == "Abra"){
+                    pokeball[j] = "Kadabra"; 
+                }
+        cout<<pokeball[j]<<". "<<endl;
+            
+    }
+    
+    cout<<"\n\t   TU POKEBALL:\n\t------------------------\n"<<pokeball[0]<<endl<<pokeball[1]<<endl<<"\t------------------------";
+            cout<<"\n\n PREPARATE PARA LA BATALLA!!!!\n Buena Suerte. ";
+
+
+}
 
