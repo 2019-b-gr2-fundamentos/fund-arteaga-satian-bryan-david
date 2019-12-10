@@ -20,6 +20,7 @@ string DandoNombres(string op);
 void Eliminaciones(string pokemonUno, string pokemonDos, string pokemonTres, string pokemonCuatro);
 void PreguntarEvolucion(string Uno, string Dos);
 void Evoluciones(string pokemonUno, string pokemonDos);
+void JugarDeNuevo();
 
 int main(){
     pokedex();
@@ -215,6 +216,7 @@ void PreguntarEvolucion(string Uno, string Dos){
         case 2:
             cout<<"\n\t   TU POKEBALL:\n\t------------------------\n"<<"       "<<Uno<<endl<<"       "<<Dos<<endl<<"\t------------------------";
             cout<<"\n\n PREPARATE PARA LA BATALLA!!!!\n Buena Suerte. ";
+            JugarDeNuevo();
             break;
         
         default:
@@ -265,6 +267,15 @@ void Evoluciones(string pokemonUno, string pokemonDos){
     cout<<"\n\t   TU POKEBALL:\n\t------------------------\n"<<pokeball[0]<<endl<<pokeball[1]<<endl<<"\t------------------------";
             cout<<"\n\n PREPARATE PARA LA BATALLA!!!!\n Buena Suerte. ";
 
+    JugarDeNuevo();
 
+}
+
+void JugarDeNuevo(){
+    cout<<"\n\nPara jugar de nuevo presiona --> 1.\nPara salir presiona cualquier otra tecla. \n";
+            int jugarNuevamente; cin>>jugarNuevamente;
+            if(jugarNuevamente == 1){
+                main();
+            }
 }
 
