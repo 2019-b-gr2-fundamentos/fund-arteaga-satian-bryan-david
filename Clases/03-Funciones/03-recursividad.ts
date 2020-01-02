@@ -1,4 +1,4 @@
-/* **************************
+
 function imprimirMensajeNveces( mensaje: string, numeroVeces: number): void{
    
     if(numeroVeces == 0){
@@ -17,11 +17,11 @@ function main(){
 }
 main();
 
-*****************************   */
+*****************************   
 
-/*
+
 TIPADO DE ARREGLOS
-CONST ARRGLONumeros: number[] = [1,2,3];
+const ARRGLONumeros: number[] = [1,2,3];
 const klsafjsdlfjstring: string[] = ['a','b','c'];
 const arregloBoolean: boolean[] = [true, false, true];
 
@@ -29,7 +29,7 @@ PSEUCODIGO
 ingresa un arreglo a la funcion, luegoesta funcion me  imprime los elementos del arreglo.
 */
 
-/*
+
 
 function contadorArreglo(elementosArreglo: number[], posicionArreglo: number): void{
 
@@ -48,7 +48,7 @@ function main(){
     contadorArreglo(miArreglo, 3);
 }
 main();
-*/
+
 
 
 
