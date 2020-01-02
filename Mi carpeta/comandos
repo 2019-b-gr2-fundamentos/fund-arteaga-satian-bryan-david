@@ -12,3 +12,6 @@ y ya se compila.
 Para hacer un console.log con variabeles y texto >
 console.log(`blablabla ${} asffdas);
     
+
+    Para debugear es necesario usar el copy trelative path y siempre crear un debugger para cada 
+    programa
