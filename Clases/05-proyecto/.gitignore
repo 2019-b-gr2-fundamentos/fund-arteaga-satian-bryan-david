@@ -1,0 +1,3 @@
+node_modules/
+// solo se puede tener un packAge
+por esos se ignora el node_modules por ya tenemos un packaAge
