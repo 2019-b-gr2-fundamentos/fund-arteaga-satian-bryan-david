@@ -37,10 +37,18 @@ void CrearMatrices(){
         {1,2}
     };
 
-    float MatrizDos[2][3] =
+  /*  float MatrizDos[2][3] =
     {
-        {2,5,1},
+        {2,5,1}, 
         {1,1,1},
+    };
+    */
+
+    float MatrizDos[3][2] = 
+    {
+        {2,1},
+        {1,4},
+        {1,2}
     };
 
     int tamanoFilaUno = sizeof(MatrizUno)/ sizeof(MatrizUno[0]); // con el sizeof definimos el tamno pero en bytes.
@@ -55,23 +63,32 @@ void CrearMatrices(){
     if(FilasyColumnas == true){
         //conmparo los numeros de la filas y luego procedo a las columnas.
          bool VoF = true; // con este verifico que siempre se mantenga en true 
-         int contador = 0;
+         int ContadorColumna = 0;
+         int ContadorFila = 0;
         do{
             do{
-                if(MatrizUno[0][contador] != MatrizDos[0][contador]){
+                if(MatrizUno[ContadorFila][ContadorColumna] != MatrizDos[ContadorFila][ContadorColumna]){
                 VoF = false;
                 }
+                ContadorColumna += 1;
 
 
-            }while(VoF == true && contador<tamanoColumnaUno);
+            }while(VoF == true && ContadorColumna<tamanoColumnaUno);
 
-        }while ();
-        
-        
-        
-        
+                ContadorFila += 1;
+
+        }while (VoF == true && ContadorFila<tamanoFilaUno); // hasta aqui acabo de comparar elementos
+
+        if(VoF == true){
+            cout<<"Las matrices que has ingresado son iguales. :)"<<endl;
+
+        }else{
+            cout<<"Las matrices que has ingresado NO son iguales. :("<<endl;
+        }
         
     }
+
+    
 
 
 
