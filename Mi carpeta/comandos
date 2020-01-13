@@ -15,3 +15,10 @@ console.log(`blablabla ${} asffdas);
 
     Para debugear es necesario usar el copy trelative path y siempre crear un debugger para cada 
     programa
+
+
+    el npm publish se lo usa en la libreria
+    para instalar nuevas librerias se instala el npm install
+
+    david-libreriauno": "^1.1.0" el ^ sirve para que se instale la version mas actual
+    npm install "nombre de la libreria" y se installa y ademas se actualiza la version de package.json

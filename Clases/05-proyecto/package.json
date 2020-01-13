@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "david-libreriauno": "^1.0.0"
+    "david-libreriauno": "^1.1.0"
   }
 }
