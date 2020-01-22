@@ -28,6 +28,8 @@ console.log(`blablabla ${} asffdas);
     luego crear un .gitignore para no tomar en cuenta los node_modules que se crean cuando se instala una libreria
     para instalar u a libreria es npm install
 
-    "start": "(tsc 02-crud.ts || echo) && node 02-crud.js" --> con esto podemos tranquilar el archivo sin necesidad de 
+    "start": "(tsc 02-crud.ts --target ES5|| echo) && node 02-crud.js" --> con esto podemos tranquilar el archivo sin necesidad de 
     hacer en la node comand
+    
+
     

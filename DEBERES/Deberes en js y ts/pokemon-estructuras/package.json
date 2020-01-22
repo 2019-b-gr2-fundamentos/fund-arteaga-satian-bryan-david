@@ -1,0 +1,15 @@
+{
+  "name": "pokemon-estructuras",
+  "version": "1.0.0",
+  "description": "Con esto puedo transquilar de una a js",
+  "main": "index.js",
+  "scripts": {
+    "start": "(tsc deberpokemon.ts || echo) && node deberpokemon.js"
+  },
+  "author": "David Arteaga",
+  "license": "ISC",
+  "dependencies": {
+    "prompts": "^2.3.0",
+    "readline-sync": "^1.4.10"
+  }
+}
