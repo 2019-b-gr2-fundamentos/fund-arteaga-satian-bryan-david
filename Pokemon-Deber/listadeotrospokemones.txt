@@ -1,0 +1,16 @@
+[
+    {
+        "Nombre": "Metapod",
+        "Numero": 10,
+        "Tipo_Principal": "bicho",
+        "Etapa_de_Evolucion": 2,
+        "Debilidad": "fuego"
+    },
+    {
+        "Nombre": "Vulpix",
+        "Numero": 36,
+        "Tipo_Principal": "fuego",
+        "Etapa_de_Evolucion": 1,
+        "Debilidad": "tierra"
+    }
+]
