@@ -22,3 +22,14 @@ console.log(`blablabla ${} asffdas);
 
     david-libreriauno": "^1.1.0" el ^ sirve para que se instale la version mas actual
     npm install "nombre de la libreria" y se installa y ademas se actualiza la version de package.json
+
+
+    para crear el package.jso es el npm init
+    luego crear un .gitignore para no tomar en cuenta los node_modules que se crean cuando se instala una libreria
+    para instalar u a libreria es npm install
+
+    "start": "(tsc 02-crud.ts --target ES5|| echo) && node 02-crud.js" --> con esto podemos tranquilar el archivo sin necesidad de 
+    hacer en la node comand
+    
+
+    
