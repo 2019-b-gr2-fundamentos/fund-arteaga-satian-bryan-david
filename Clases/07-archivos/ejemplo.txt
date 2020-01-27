@@ -1,6 +1,1 @@
-[
-    {
-        "id": 100,
-        "nombre": "Pepito"
-    }
-]
+[{"id":100,"nombre":"wer"},{"id":1,"nombre":"David"},{"id":2,"nombre":"Arteaga"},{"id":101,"nombre":"Carlos"},{"id":102,"nombre":"Sam"},{"id":103,"nombre":"Rodrigo"},{"id":104,"nombre":"Mela"}]

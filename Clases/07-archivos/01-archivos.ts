@@ -9,8 +9,61 @@ async function main(){
         './ejemplo.txt'
     );
     console.log('contenidoArchivo', contenidoArchivo);
-    const arregloCagadoDeArchivo = JSON.parse(contenidoArchivo);
-    const arregloEstudiantes: Estudiante[] = arregloCagadoDeArchivo;
+    //parsear -> texto -> estructura en memoria
+    /*
+    {
+        "nombre": 'Adrian"
+    }
+    */
+   let arregloCargadoDeArchivo;
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+   try{ //INTENTA EJECUTAR TODO ESTE CODIGO
+
+   // throw new Error("He parado el programa porque he detectado algo");
+
+    arregloCargadoDeArchivo = JSON.parse(contenidoArchivo);
+   } catch(error){ // PERO SI HAY UN ERROR SE VA AL CATCH
+    //arregloCargadoDeArchivo = [];
+
+    
+    console.error('Error parseando archivo');
+    //Con esto hacemos que nos marque si se parsea o no el JSON , ademas, en caso que no valga
+    //este va a seguir funcionando y nos ahorramos todas las lineas de error que suelen aparecer en el compilador
+
+    //Ahora vamos a hacer que el programa necesariamente pare aproposito 
+    throw new Error("EL ARCHIVO ESTA MAL PARSEADO");
+
+   }
+
+        //OPERADORES
+        let minimoId = -1;
+        arregloCargadoDeArchivo
+            .forEach( //NO ENVIAN NADA Y NO SE LES DEVUELVE NADA, SIRVE PARA ITERAR
+                function(valorActual){
+                    const idActual = valorActual.id;
+                    if(idActual > minimoId){
+                        minimoId = idActual;
+                    }
+
+                }
+            );
+        minimoId = minimoId + 1;
+        contador = minimoId;
+
+    const arregloEstudiantes: Estudiante[] = arregloCargadoDeArchivo;
     const arregloPreguntas = [
         {
             type: 'text',
@@ -81,7 +134,15 @@ async function main(){
                     return valorActual.nombre == buscar.nombre;
                 }
             );
-        console.log(estudianteEncontrado)
+        console.log(estudianteEncontrado);
+
+        const arregloTexto = JSON.stringify(arregloEstudiantes);
+         //  JSON.stringify -> Convierte el objeto o arreglo que esta en memoria a texto
+        console.log(arregloTexto);
+        escribirArchivo(
+            './ejemplo.txt',
+            arregloTexto
+        );
         
 
 
