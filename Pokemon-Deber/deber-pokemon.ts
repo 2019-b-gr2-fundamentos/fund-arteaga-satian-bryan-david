@@ -2,6 +2,7 @@
 import * as  prompts from 'prompts';
 import { leerArchivoPokemon } from './leerarchivo';
 import { EstructuraPokemon } from './interfaces/estructurapokemon.interface';
+import { escribirArchivo } from './escribirarchivo';
 
 
 function main(){
@@ -70,7 +71,9 @@ async function CrearPokemon() {
 
     pokedex.push(MiPokemon);
 
-    console.log('\n\tTu nueva POKEDEX es: \n ', pokedex);
+    
+
+    //Preguntamos si se modifica
 
     const preguntarSiSeModifica = await prompts(
         {
@@ -83,10 +86,12 @@ async function CrearPokemon() {
     
     if(preguntarSiSeModifica.decision == 1){
         console.log('\nIngresa el nombre del pokemon que deseas modificar: \n');
-
-
-    const arregloDenombres: string[] = [pokedex[0].Nombre, pokedex[1].Nombre, pokedex[2].Nombre];
-    console.log(arregloDenombres);
+      /*  let arregloDenombres: string[]; // [pokedex[0].Nombre, pokedex[1].Nombre, pokedex[2].Nombre];
+         for(let i= 0; i<4; i++ ){ 
+        arregloDenombres[i] = pokedex[i].Nombre;
+        }
+         console.log(arregloDenombres); */
+         
 
             const buscarnombre = await prompts(
                 {
@@ -144,8 +149,16 @@ async function CrearPokemon() {
             }
         
             pokedex[indicenombreEncontrado] = POkemonEditadoEnLaEstructura;
-        
+
+            ///Aqui escribimos el nuevo pokemon en el archivo de texto. *********************
+            const agregarpokemonalTexto = JSON.stringify(pokedex);
             console.log('\n\tTu nueva POKEDEX es: \n ', pokedex);
+            escribirArchivo(
+                './listadeotrospokemones.txt',
+                agregarpokemonalTexto
+            );
+        
+        
 
     }
 
@@ -156,3 +169,6 @@ async function CrearPokemon() {
 }
 
 main();
+
+//MIERCOLES 19 LA PRUEBA 
+//JUEVES 20 PRESENTAR LOS DEBERES
