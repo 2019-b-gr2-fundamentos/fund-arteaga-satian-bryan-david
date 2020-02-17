@@ -39,12 +39,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // Crear, borrar actualizar, buscar
 var prompts = require("prompts");
 var leerarchivo_1 = require("./leerarchivo");
+var escribirarchivo_1 = require("./escribirarchivo");
 function main() {
     CrearPokemon();
 }
 function CrearPokemon() {
     return __awaiter(this, void 0, void 0, function () {
-        var contenidoArchivo, convertimosArchivo, pokedex, preguntas, respuestas, MiPokemon, preguntarSiSeModifica, arregloDenombres, buscarnombre_1, indicenombreEncontrado, POkemonEditadopreguntas, POkemonEditadoRespuestas, POkemonEditadoEnLaEstructura;
+        var contenidoArchivo, convertimosArchivo, pokedex, preguntas, respuestas, MiPokemon, preguntarSiSeModifica, buscarnombre_1, indicenombreEncontrado, POkemonEditadopreguntas, POkemonEditadoRespuestas, POkemonEditadoEnLaEstructura, agregarpokemonalTexto, preguntarSiSeElimina, buscarnombreparaEliminar_1, indicenombreEncontradoParaEliminar;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -92,7 +93,6 @@ function CrearPokemon() {
                         Debilidad: respuestas.Debilidad
                     };
                     pokedex.push(MiPokemon);
-                    console.log('\n\tTu nueva POKEDEX es: \n ', pokedex);
                     return [4 /*yield*/, prompts({
                             type: 'number',
                             name: 'decision',
@@ -100,10 +100,8 @@ function CrearPokemon() {
                         })];
                 case 2:
                     preguntarSiSeModifica = _a.sent();
-                    if (!(preguntarSiSeModifica.decision == 1)) return [3 /*break*/, 5];
+                    if (!(preguntarSiSeModifica.decision == 1)) return [3 /*break*/, 7];
                     console.log('\nIngresa el nombre del pokemon que deseas modificar: \n');
-                    arregloDenombres = [pokedex[0].Nombre, pokedex[1].Nombre, pokedex[2].Nombre];
-                    console.log(arregloDenombres);
                     return [4 /*yield*/, prompts({
                             type: 'text',
                             name: 'Nombre',
@@ -152,11 +150,36 @@ function CrearPokemon() {
                         Debilidad: POkemonEditadoRespuestas.Debilidad
                     };
                     pokedex[indicenombreEncontrado] = POkemonEditadoEnLaEstructura;
+                    agregarpokemonalTexto = JSON.stringify(pokedex);
                     console.log('\n\tTu nueva POKEDEX es: \n ', pokedex);
-                    _a.label = 5;
-                case 5: return [2 /*return*/];
+                    escribirarchivo_1.escribirArchivo('./listadeotrospokemones.txt', agregarpokemonalTexto);
+                    return [4 /*yield*/, prompts({
+                            type: 'number',
+                            name: 'decision',
+                            message: '\nDeseas eliminar algun Pokemon?\nSi -> 1\nNo -> Presiona cualquier tecla\n'
+                        })];
+                case 5:
+                    preguntarSiSeElimina = _a.sent();
+                    if (!(preguntarSiSeElimina.decision == 1)) return [3 /*break*/, 7];
+                    console.log('Que pokemon deseas eliminar?\n', pokedex);
+                    return [4 /*yield*/, prompts({
+                            type: 'text',
+                            name: 'Nombre',
+                            message: '\nNombre?:'
+                        })];
+                case 6:
+                    buscarnombreparaEliminar_1 = _a.sent();
+                    indicenombreEncontradoParaEliminar = pokedex.findIndex(function (valorActual) {
+                        return valorActual.Nombre == buscarnombreparaEliminar_1.Nombre;
+                    });
+                    pokedex.splice(indicenombreEncontradoParaEliminar, 1);
+                    console.log('Felicidades!!!\nTu POKEDEX definitiva es:\n', pokedex);
+                    _a.label = 7;
+                case 7: return [2 /*return*/];
             }
         });
     });
 }
 main();
+//MIERCOLES 19 LA PRUEBA 
+//JUEVES 20 PRESENTAR LOS DEBERES
