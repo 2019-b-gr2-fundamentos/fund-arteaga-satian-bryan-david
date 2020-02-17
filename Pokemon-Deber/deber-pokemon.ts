@@ -157,6 +157,38 @@ async function CrearPokemon() {
                 './listadeotrospokemones.txt',
                 agregarpokemonalTexto
             );
+            //Aqui agregamos la condicion para eliminar el programa
+
+            const preguntarSiSeElimina = await prompts(
+                {
+                    type: 'number',
+                    name: 'decision',
+                    message: '\nDeseas eliminar algun Pokemon?\nSi -> 1\nNo -> Presiona cualquier tecla\n' 
+                });
+
+                if(preguntarSiSeElimina.decision == 1){
+                    console.log('Que pokemon deseas eliminar?\n', pokedex);
+
+                    const buscarnombreparaEliminar = await prompts(
+                        {
+                            type: 'text',
+                            name: 'Nombre',
+                            message: '\nNombre?:'
+                        }
+                    );
+                
+                    const indicenombreEncontradoParaEliminar = pokedex.findIndex(
+                        function(valorActual){
+                            return valorActual.Nombre == buscarnombreparaEliminar.Nombre; 
+                        }  
+                    );
+
+                    pokedex.splice(indicenombreEncontradoParaEliminar, 1);
+
+                    console.log('Felicidades!!!\nTu POKEDEX definitiva es:\n', pokedex);
+
+
+                }
         
         
 

@@ -1,0 +1,11 @@
+{
+  "name": "operadores-deber",
+  "version": "1.0.0",
+  "description": "Aqui probando los operadores",
+  "main": "index.js",
+  "scripts": {
+    "start": "(tsc deberoperadores.ts --target ES5|| echo) && node deberoperadores.js"
+  },
+  "author": "David Arteaga",
+  "license": "ISC"
+}
